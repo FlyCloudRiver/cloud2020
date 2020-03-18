@@ -22,6 +22,10 @@ eureka:
       #defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版
 
+  instance:
+      instance-id: payment8002  #必须这样个是才生效。。。。。。。
+      prefer-ip-address: true     #访问路径可以显示IP地址（其实不配也可以）
+
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
