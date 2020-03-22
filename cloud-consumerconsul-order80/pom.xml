@@ -9,19 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-eureka-server7002</artifactId>
+    <artifactId>cloud-consumerconsul-order80</artifactId>
 
     <dependencies>
-        <!--eureka-server-->
+
+
+        <!-- SpringCloud consul server-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-        <!--引入自己定义的api通用包，可以使用payment支付Entity-->
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>${project.version}</version>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
         <!--boot web actuator-->
         <dependency>
@@ -53,4 +49,5 @@
             <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
+
 </project>
