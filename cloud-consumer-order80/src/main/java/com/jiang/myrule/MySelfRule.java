@@ -27,6 +27,7 @@ public class MySelfRule {
     // List = 2 instance
     // 1 % 2 = 1 -》 index = 1   list.get(index);
     // 2 % 2 = 0 -》 index = 0   list.get(index);
-    // 1 % 2 = 1 -》 index = 1   list.get(index); 以此类推
+    // 1 % 2 = 1 -》 index = 1   list.get(index);
+    // 以此类推
 
 }
