@@ -46,4 +46,16 @@ public class PaymentController {
         }
     }
 
+    /**
+     * @MethodName: getPaymengLB
+     * @Description: 手写轮询算法
+     * @Param: []
+     * @Return: java.lang.String
+     * @Author: jiang
+     * @Date: 2020/3/28
+     **/
+    @GetMapping("/lb")
+    public String getPaymengLB(){
+        return serverPort;
+    }
 }
