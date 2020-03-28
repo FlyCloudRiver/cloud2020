@@ -5,6 +5,7 @@ import com.jiang.springcloud.service.PaymentFeignService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -19,13 +20,21 @@ import javax.annotation.Resource;
 
 @RestController
 @Slf4j
+@RequestMapping("/consumer")
 public class OrderFeignController {
     @Resource
     private PaymentFeignService paymentFeignService;
 
-    @GetMapping("consumer/payment/get/{id}")
+    @GetMapping("/payment/get/{id}")
     CommonResult getPaymentById(@PathVariable("id") Long id){
         return paymentFeignService.getPaymentById(id);
     }
 
+    @GetMapping("/payment/feign/timeout")
+    String paymentFeignTimeout(){
+
+        // openFeign  客服端默认等待一秒
+        return paymentFeignService.paymentFeignTimeout();
+
+    }
 }
