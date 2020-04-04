@@ -13,6 +13,7 @@ import com.jiang.springcloud.entities.Payment;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -77,6 +78,25 @@ public class PaymentController {
   **/
     @GetMapping("/lb")
     public String getPaymengLB(){
+        return serverPort;
+    }
+
+
+    /**
+     * @MethodName: paymentFeignTimeout
+     * @Description: 定义一个执行三秒的空方法，用于openFeign调用超时出错
+     * @Param: []
+     * @Return: java.lang.String
+     * @Author: jiang
+     * @Date: 2020/3/28
+    **/
+    @GetMapping("/feign/timeout")
+    public String paymentFeignTimeout(){
+        try{
+            TimeUnit.SECONDS.sleep(3);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }
