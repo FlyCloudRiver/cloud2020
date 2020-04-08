@@ -1,18 +1,12 @@
 package com.jiang.springcloud.controller;
 
 
-import com.jiang.springcloud.entities.CommonResult;
-import com.jiang.springcloud.entities.Payment;
 import com.jiang.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
