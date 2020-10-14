@@ -99,4 +99,18 @@ public class PaymentController {
         }
         return serverPort;
     }
+
+
+    /**
+     * @description: 测试链路跟踪代码
+     * @author: Mr.Jiang
+     {@link }
+     * @return java.lang.String
+     * @throws
+     * @date: 2020/10/14 20:48
+     */
+    @GetMapping("zipkin")
+    public String paymentZipkin() {
+        return "hi,i`am paymentzipkin server fall back.welcome to atguigu.hahahahahhahahah";
+    }
 }
