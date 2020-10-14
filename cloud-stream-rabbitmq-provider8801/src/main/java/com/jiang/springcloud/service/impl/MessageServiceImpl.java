@@ -1,11 +1,12 @@
-package com.jing.springcloud.service.impl;
+package com.jiang.springcloud.service.impl;
 
-import com.jing.springcloud.service.IMessageService;
+import com.jiang.springcloud.service.IMessageService;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 /**
  * @ClassName MessageServiceImpl
@@ -16,7 +17,7 @@ import java.util.UUID;
  **/
 @EnableBinding(Source.class)  //定义消息推送通道
 public class MessageServiceImpl implements IMessageService {
-
+    @Resource
     private MessageChannel output;  //消息发送通道
     @Override
     public String send() {

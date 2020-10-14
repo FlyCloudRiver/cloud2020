@@ -3,19 +3,18 @@ package com.jiang.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * @ClassName EurekaMain7001
+ * @ClassName StreamMQMain8803
  * @Description: TODO
  * @Author Administrator
- * @Date 2020/3/17
+ * @Date 2020/9/29
  * @Version V1.0
  **/
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableEurekaServer
-public class EurekaMain7001 {
+public class StreamMQMain8803 {
+
     public static void main(String[] args) {
-        SpringApplication.run(EurekaMain7001.class,args);
+        SpringApplication.run(StreamMQMain8803.class,args);
     }
 }
