@@ -20,3 +20,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+
+##################  http://config-3344.com:3344/master/config-dev.yml  访问形式   从GitHub获取配置文件
